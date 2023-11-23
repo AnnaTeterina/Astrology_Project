@@ -141,6 +141,10 @@ main {
     padding-top: 65px;
 }
 
+.non_active {
+    display: none;
+}
+
 .arrows {
     width: 35px;
     cursor: pointer;
@@ -167,7 +171,7 @@ main {
 }
 
 .secondArticle {
-    width: 400px;
+    width: 415px;
     height: 320px;
 }
 
@@ -178,12 +182,12 @@ main {
 }
 
 .fourthArticle {
-    width: 180px;
+    width: 190px;
     height: 300px;
 }
 
 .fifthArticle {
-    width: 220px;
+    width: 225px;
     height: 300px;
 }
 
