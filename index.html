@@ -12,6 +12,39 @@
                 background-position: center;
                 background-size: cover;
             } 
+
+            .galaxyBlock {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/1_2.jpg);
+                background-position: center;
+                background-size: cover;
+                width: 250px;
+                height: auto;
+            }
+            .firstArticle {
+                background: url(images/universe.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .secondArticle {
+                background: url(images/universe.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .thirdArticle {
+                background: url(images/universe.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .fourthArticle {
+                background: url(images/universe.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .fifthArticle {
+                background: url(images/universe.jpg);
+                background-position: center;
+                background-size: cover;
+            }
         </style>
     </head>
 
@@ -26,10 +59,11 @@
                         <span style="font-size: 35px; opacity: 50%; line-height: 35px;">РАЗВИТИЕ ДУШИ И</span>
                         <span style="font-size: 65px; line-height: 65px;">ЭВОЛЮЦИЯ СОЗНАНИЯ</span>
                         <nav>
-                            <div><a class="a-4" href="#">Блог</a></div>
+                            <div><a class="a-1" href="#blog">Блог</a></div>
                             <div><a class="a-2" href="#">Обо мне</a></div>
                             <div><a class="a-3" href="#">Услуги</a></div>
-                            <div><a class="a-5" href="#">Отзывы</a></div>    
+                            <div><a class="a-4" href="#">Отзывы</a></div>    
+                            <div><a class="a-5" href="#">Контакты</a></div>  
                         </nav>
                     </div>
                 </div>
@@ -37,11 +71,58 @@
         </header>
 
         <main>
+            <section class="blog" id="blog">
+                <div class="blogInfo">
+                    <div style="width: 725px; display: flex; align-items: end; justify-content: space-between;">
+                        <span style="font-size: 40px;">Блог</span>
+                        <div style="width: 250px; display: flex; justify-content: space-between;">
+                            <button id="buttonArticles" class="blog_button button_clicked" onclick="clickedButtonAsrticles()">Статьи</button>
+                            <button id="buttonMeditations" class="blog_button" onclick=" clickedButtonMeditations()">Медитации</button>
+                        </div>
+                    </div>
+                    <div class="articles">
+                        <img class="arrows" src="images/svg/left_arrow.svg" alt="">
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; width: auto;">
+                            <a class="article js-open-modal" href="#" data-modal="1">
+                                <div class="firstArticle">
+                                    <span style="z-index: 15;">Осознанное повышение вибраций благодаря вниманию в тело</span>
+                                </div>
+                            </a>
+                            <a class="article js-open-modal" href="#" data-modal="2">
+                                <div class="secondArticle">
+                                    <span style="z-index: 15;">Про полноту тела... и энергообмен. Часть 1</span>
+                                </div>
+                            </a>
+                            <a class="article js-open-modal" href="#" data-modal="3">
+                                <div class="thirdArticle">
+                                    <span style="z-index: 15;">Про полноту тела... и энергообмен. Часть 2</span>
+                                </div>
+                            </a>
+                            <a class="article js-open-modal" href="#" data-modal="4">
+                                <div class="fourthArticle">
+                                    <span style="z-index: 15;">Про полноту тела... и энергообмен. Часть 3</span>
+                                </div>
+                            </a>
+                            <a class="article js-open-modal" href="#" data-modal="5">
+                                <div class="fifthArticle">
+                                    <span style="z-index: 15;">Про полноту тела... и энергообмен. Часть 4</span>
+                                </div>
+                            </a>
+                        </div>
+                        <img class="arrows" src="images/svg/right_arrow.svg" alt="">
+                    </div>
+                    <div class="meditation">
 
+                    </div>
+                </div>
+                <div class="galaxyBlock"></div>
+            </section>
         </main>
 
         <footer>
 
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
