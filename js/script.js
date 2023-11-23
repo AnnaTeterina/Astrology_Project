@@ -1,13 +1,16 @@
 let buttonArticles = document.getElementById("buttonArticles")
 let buttonMeditations = document.getElementById("buttonMeditations")
+let articles_block = document.getElementById("articles")
 
 function clickedButtonAsrticles() { 
     buttonArticles.classList.add("button_clicked");
     buttonMeditations.classList.remove("button_clicked")
+    articles_block.classList.remove("non_active")
 }
 
 function clickedButtonMeditations() { 
     buttonMeditations.classList.add("button_clicked");
     buttonArticles.classList.remove("button_clicked")
+    articles_block.classList.add("non_active")
 }
 
