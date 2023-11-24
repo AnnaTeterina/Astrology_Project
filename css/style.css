@@ -156,7 +156,10 @@ main {
     font-size: 19px;
 }
 
-.firstArticle, .secondArticle, .thirdArticle, .fourthArticle, .fifthArticle {
+.article-1, .article-2, .article-3, .article-4, .article-5, 
+.article-6, .article-7, .article-8, .article-9, .article-10,
+.article-11, .article-12, .article-13, .article-14, .article-15, 
+.article-16, .article-17, .article-18, .article-19 {
     width: 340px;
     height: 240px;
     display: flex;
@@ -167,28 +170,36 @@ main {
     transition: all 0.25s ease-out;
 }
 
-.secondArticle {
+.article-16 {
+    width: 405px;
+    height: 290px;
+}
+
+.article-4, .article-9, .article-14, .article-18 {
     width: 405px;
     height: 310px;
 }
 
-.thirdArticle {
+.article-3, .article-8, .article-13, .article-17 {
     width: 340px;
     height: 360px;
     margin-top: -65px;
 }
 
-.fourthArticle {
+.article-2, .article-7, .article-12 {
     width: 180px;
     height: 290px;
 }
 
-.fifthArticle {
+.article-1, .article-6, .article-11 {
     width: 215px;
     height: 290px;
 }
 
-.firstArticle::before, .secondArticle::before, .thirdArticle::before, .fourthArticle::before, .fifthArticle::before {
+.article-1::before, .article-2::before, .article-3::before, .article-4::before, .article-5::before, 
+.article-6::before, .article-7::before, .article-8::before, .article-9::before, .article-10::before,
+.article-11::before, .article-12::before, .article-13::before, .article-14::before, .article-15::before, 
+.article-16::before, .article-17::before, .article-18::before, .article-19::before {
     content: '';
     z-index: 10;
     width: 100%;
@@ -200,8 +211,16 @@ main {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
 }
 
-.firstArticle:hover, .secondArticle:hover, .thirdArticle:hover, .fourthArticle:hover, .fifthArticle:hover {
+.article-1:hover, .article-2:hover, .article-3:hover, .article-4:hover, .article-5:hover,
+.article-6:hover, .article-7:hover, .article-8:hover, .article-9:hover, .article-10:hover,
+.article-11:hover, .article-12:hover, .article-13:hover, .article-14:hover, .article-15:hover, 
+.article-16:hover, .article-17:hover, .article-18:hover, .article-19:hover {
     z-index: 11;
     transform: scale(1.04);   
     /*box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35);*/
+}
+
+.meditations {
+    width: 850px;
+    height: 685px;
 }
