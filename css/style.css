@@ -162,6 +162,7 @@ main {
     display: flex;
     align-items: end;
     padding: 10px 15px;
+    margin: 5px;
     position: relative;
     transition: all 0.5s ease-out;
 }
@@ -200,7 +201,7 @@ main {
 }
 
 .firstArticle:hover, .secondArticle:hover, .thirdArticle:hover, .fourthArticle:hover, .fifthArticle:hover {
-    z-index: 11;
+    /*z-index: 11;
     transform: scale(1.05);   
-    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35); 
+    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35);*/
 }
