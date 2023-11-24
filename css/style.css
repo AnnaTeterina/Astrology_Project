@@ -132,13 +132,13 @@ main {
 
 .articles {
     position: relative;
-    margin-left: -65px;
+    margin-top: 65px;
+    left: -65px;
     width: 850px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 65px;
 }
 
 .non_active {
@@ -153,7 +153,7 @@ main {
 .article {
     color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .firstArticle, .secondArticle, .thirdArticle, .fourthArticle, .fifthArticle {
@@ -164,7 +164,7 @@ main {
     padding: 10px 15px;
     margin: 5px;
     position: relative;
-    transition: all 0.5s ease-out;
+    transition: all 0.25s ease-out;
 }
 
 .secondArticle {
@@ -175,7 +175,7 @@ main {
 .thirdArticle {
     width: 340px;
     height: 360px;
-    margin-top: -60px;
+    margin-top: -65px;
 }
 
 .fourthArticle {
@@ -201,7 +201,7 @@ main {
 }
 
 .firstArticle:hover, .secondArticle:hover, .thirdArticle:hover, .fourthArticle:hover, .fifthArticle:hover {
-    /*z-index: 11;
-    transform: scale(1.05);   
-    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35);*/
+    z-index: 11;
+    transform: scale(1.04);   
+    /*box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35);*/
 }
