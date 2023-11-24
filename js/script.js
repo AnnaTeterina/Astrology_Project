@@ -8,7 +8,8 @@ function clickedButtonAsrticles() {
     buttonMeditations.classList.remove("button_clicked");
     //meditations_block.classList.add("non_active")
     //articles_block.classList.remove("non_active");
-    articles_block.style.display = 
+    articles_block.style.display = 'block';
+    meditations_block.style.display = 'none';
 }
 
 function clickedButtonMeditations() { 
@@ -16,5 +17,7 @@ function clickedButtonMeditations() {
     buttonArticles.classList.remove("button_clicked");
     //articles_block.classList.add("non_active");
     //meditations_block.classList.remove("non_active")
+    articles_block.style.display = 'none';
+    meditations_block.style.display = 'block';
 }
 
