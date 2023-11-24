@@ -17,3 +17,9 @@ function clickedButtonMeditations() {
     meditations_block.classList.remove("non_active")
 }
 
+jQuery(document).ready(function($){
+    $("#moreVideos").click(function(e){
+      $(".videos:hidden").slice(0,1).fadeIn();
+      if ($(".videos:hidden").length < 1) $(this).fadeOut();
+    })
+  })

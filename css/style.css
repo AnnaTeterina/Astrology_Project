@@ -141,10 +141,6 @@ main {
     justify-content: space-between;
 }
 
-.non_active {
-    display: none;
-}
-
 .arrows {
     width: 35px;
     cursor: pointer;
@@ -160,7 +156,7 @@ main {
 .article-6, .article-7, .article-8, .article-9, .article-10,
 .article-11, .article-12, .article-13, .article-14, .article-15, 
 .article-16, .article-17, .article-18, .article-19, .article-20 {
-    width: 340px;
+    width: 322px;
     height: 240px;
     display: flex;
     align-items: end;
@@ -176,23 +172,23 @@ main {
 }*/
 
 .article-4, .article-9, .article-14, .article-19 {
-    width: 405px;
+    width: 388px;
     height: 310px;
 }
 
 .article-3, .article-8, .article-13, .article-18 {
-    width: 340px;
+    width: 322px;
     height: 360px;
     margin-top: -65px;
 }
 
 .article-2, .article-7, .article-12, .article-17 {
-    width: 180px;
+    width: 173px;
     height: 290px;
 }
 
 .article-1, .article-6, .article-11, .article-16 {
-    width: 215px;
+    width: 205px;
     height: 290px;
 }
 
@@ -211,6 +207,10 @@ main {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
 }
 
+.article-17::before {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0) 75%);
+}
+
 .article-1:hover, .article-2:hover, .article-3:hover, .article-4:hover, .article-5:hover,
 .article-6:hover, .article-7:hover, .article-8:hover, .article-9:hover, .article-10:hover,
 .article-11:hover, .article-12:hover, .article-13:hover, .article-14:hover, .article-15:hover, 
@@ -221,6 +221,76 @@ main {
 }
 
 .meditations {
-    width: 850px;
-    height: 685px;
+    width: 725px;
+    height: auto;
+    padding-top: 40px;
+}
+
+.videos, .secondClassForVideos {
+    width: 100%;
+    height: 622px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.video_block {
+    width: 300px;
+    height: auto;
+    margin-top: 25px;
+}
+
+.video_block:nth-child(2), .video_block:nth-child(4) {
+    margin-left: 75px;
+}
+
+.video_block span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.moreVideos {
+    width: 725px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#moreVideos {
+    background: #ffffff;
+    border: none;
+    font-family: 'Jost', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    color: #868686;
+    position: relative;
+    margin-top: 30px;
+    transition: all 0.25s ease-out;
+}
+
+#moreVideos:hover {
+    color: #000000;
+}
+
+
+#moreVideos::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.25s ease-out;
+}
+
+#moreVideos:hover::before {
+    width: 100%;
+}
+
+
+
+.non_active {
+    display: none;
 }
