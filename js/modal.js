@@ -6,10 +6,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // querySelectorAll возвращает массив, делаем это потому что нужно обрабатывать клики по всем кнопка
     // а вот overlay мы получаем через querySelector, он возвращает один элемент
-    var modalButtons    = document.querySelectorAll('.js-open-modal'),
+    let modalButtons    = document.querySelectorAll('.js-open-modal'),
         overlay         = document.querySelector('#overlay-modal'),
-        closeButtons    = document.querySelectorAll('.js-modal-close'),
-        modalFormButton = document.querySelectorAll('.js-modal-form');
+        closeButtons    = document.querySelectorAll('.js-modal-close');
     
     // Перебираем массив кнопок 
     modalButtons.forEach(function(item){
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // для этого есть метод, который предотвращает стандартное действие элемента
             event.preventDefault(); 
             
-            var modalId = this.getAttribute('data-modal'), //получаем значение атрибута data-modal текущей кнопки
+            let modalId = this.getAttribute('data-modal'), //получаем значение атрибута data-modal текущей кнопки
             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]'); //находим модальное окно с этим значением
             
             // добавляем модальному окну и подложке класс active
@@ -34,28 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Назначаем каждой кнопке обработчик клика 
         item.addEventListener('click', function(event) {
             // микро-библиотека, подключенная ранее, создает функцию closets, используя ее, можно искать элемент, который находится выше по дереву и класс которого совпадает с тем который мы ищем
-            var parentModal = this.closest('.modal');
+            let parentModal = this.closest('.modal');
     
             // убираем у модального окна и подложки класс active
             parentModal.classList.remove('active'); 
             overlay.classList.remove('active');
         }); // end click
-    }); // end foreach
-
-    // Перебираем массив кнопок 
-    modalFormButton.forEach(function(item){
-        // Назначаем каждой кнопке обработчик клика 
-        item.addEventListener('click', function() {
-            
-            var modalElem = document.querySelector('.modal[data-modal="3"]'), //находим третье модальное окно
-            parentModal = this.closest('.modal[data-modal="1"]'); //находим первое модальное окно
-            
-            // если пользователь заполнил поля имени и номера телефона, то закрыть первое модальное окно и отркыть третье
-            if ((document.getElementById("name").value.length > 0) && (document.getElementById("phone").value.length > 0)) {
-                parentModal.classList.remove('active');
-                modalElem.classList.add('active'); 
-            }
-        }); // end click 
     }); // end foreach
 
     // Назначаем подложке обработчик клика 
