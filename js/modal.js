@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // а вот overlay мы получаем через querySelector, он возвращает один элемент
     let modalButtons    = document.querySelectorAll('.js-open-modal'),
         overlay         = document.querySelector('#overlay-modal'),
-        closeButtons    = document.querySelectorAll('.js-modal-close');
+        closeButtons    = document.querySelectorAll('.js-modal-close'),
+        bodyElem        = document.querySelector('body');
     
     // Перебираем массив кнопок 
     modalButtons.forEach(function(item){
@@ -20,11 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); 
             
             let modalId = this.getAttribute('data-modal'), //получаем значение атрибута data-modal текущей кнопки
-            modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]'); //находим модальное окно с этим значением
+            modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]'),
+            modalCross = document.querySelector('.modal__cross'); //находим модальное окно с этим значением
             
             // добавляем модальному окну и подложке класс active
             modalElem.classList.add('active');
             overlay.classList.add('active');
+            bodyElem.classList.add('active');
+            modalCross.classList.add('active');
         }); // end click
     }); // end foreach
 
@@ -38,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // убираем у модального окна и подложки класс active
             parentModal.classList.remove('active'); 
             overlay.classList.remove('active');
+            bodyElem.classList.remove('active');
+            modalCross.classList.remove('active');
         }); // end click
     }); // end foreach
 
@@ -45,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('click', function() {
          // убираем у модального окна и подложки класс active
         document.querySelector('.modal.active').classList.remove('active'); 
+        bodyElem.classList.remove('active'); 
         this.classList.remove('active');
+        modalCross.classList.remove('active');
     }); // end click
 }); // end ready
 
