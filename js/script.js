@@ -26,7 +26,7 @@ function btnCopy() {
     $temp.remove();
   }
  
-  copyToClipboard(".copyText");
+  copyToClipboard("#copyText");
 }
 
 jQuery(document).ready(function($){
