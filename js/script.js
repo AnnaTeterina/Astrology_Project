@@ -17,6 +17,18 @@ function clickedButtonMeditations() {
     meditations_block.classList.remove("non_active")
 }
 
+function btnCopy() {
+  function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
+ 
+  copyToClipboard(".copyText");
+}
+
 jQuery(document).ready(function($){
     $("#moreVideos").click(function(e){
       $(".videos:hidden").slice(0,1).fadeIn();

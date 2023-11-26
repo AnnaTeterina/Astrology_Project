@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Стили для подложки */
 .overlay { 
     /* Скрываем подложку  */
@@ -31,26 +33,29 @@
 }
 
 .modalWrapper {
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     position: relative;
 }
 
 /* Стили для кнопки закрытия */
 .modal__cross {
-    width: 25px;
-    height: 25px;
-    fill: #ffffff60;
+    width: 45px;
+    height: 45px;
+    fill: #ffffff;
     cursor: pointer;
-    margin: 50px;
-    z-index: 30; 
+    margin: 25px 0;
+    z-index: 35; 
     position: absolute;
-    left: 740px;
+    left: 710px;
     transition: all 0.25s ease-in;
+    background-color: rgb(42, 0, 109);
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .modal__cross:hover {
-    fill: #ffffff;
+    padding: 13px;
 }
 
 .modalBodyWrapper {
@@ -59,17 +64,22 @@
     width: 100%;
     max-width: 700px;
     height: calc(100vh - 80px);
-    font-size: 18px;
+    font-size: 19px;
     box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
+    border-radius: 25px;
     background-color: #fff;
     margin: 40px;
     padding: 20px 30px;
     color: #000000;
-    text-align: left;
+    text-align: justify;
     overflow-y: auto;
-    z-index: 30;
+    z-index: 35;
+    font-weight: 500;
 }
 
+.modalBodyWrapper::-webkit-scrollbar { 
+    width: 0; 
+}
 
 /* Стили для активных классов подложки и окна */
 .active, .active, .active {
@@ -90,22 +100,34 @@ body.active {
 .modal__header {
     height: auto;
     width: 100%;
-    border-bottom: 1px solid #868686;
+    border-bottom: 1px solid #000000;
     padding-bottom: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 35;
 }
  
 /* Стили для текста заголовка */
 .modal-text-header {
     font-size: 25px;
+    width: 400px;
+    position: relative;
+    /*margin-top: -20px;*/
+}
+
+.modal__body {
+    font-weight: 500;
 }
 
 .modal__body p {
     margin: 30px 0;
+    padding: 0 20px;
 }
 
 .modal__footer {
-    border-top: 1px solid #868686;
+    border-top: 1px solid #000000;
     padding-top: 10px;
-    padding-bottom: 20px;
     text-align: right;
 }
