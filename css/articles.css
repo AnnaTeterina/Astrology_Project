@@ -51,6 +51,22 @@ main::-webkit-scrollbar {
     padding: 20px 0;
 }
 
+ol {
+    padding-left: 23px;
+}
+
+li {
+    margin: 20px 0;
+}
+
+li:first-child {
+    margin-top: 15px;
+}
+
+li:last-child {
+    margin-bottom: 15px;
+}
+
 .article__footer {
     padding-top: 10px;
     text-align: right;
@@ -67,9 +83,65 @@ main::-webkit-scrollbar {
     border: none;
     margin: 0 3px;
     transition: all 0.25s ease-in-out;
+    padding: 0;
 }
 
-.share-buttons button:hover {
-    padding: 5px;
+.share-buttons img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
+.copy {
+    background-color: #bacbdf;
+    transition: all 1s ease-in;
+}
+
+.copy:hover {
+    background-color: #aabacc;
+}
+
+.vk {
+    background-color: #2787f5;
+    transition: all 1s ease-in;
+}
+
+.vk:hover {
+    background-color: #1e67bb;
+}
+
+.ok {
+    background-color: #ee8208;
+    transition: all 1s ease-in;
+}
+
+.ok:hover {
+    background-color: #c06905;
+}
+
+.telegram {
+    background-color: #40b3e0;
+    transition: all 1s ease-in;
+}
+
+.telegram:hover {
+    background-color: #369ac2;
+}
+
+.whatsapp {
+    background-color: #25d366;
+    transition: all 1s ease-in;
+}
+
+.whatsapp:hover {
+    background-color: #20b858;
+}
+
+.mailru {
+    background-color: #3688c8;
+    transition: all 1s ease-in;
+}
+
+.mailru:hover {
+    background-color: #296ea3; 
+}
