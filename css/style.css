@@ -225,7 +225,7 @@ main {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 15%, rgba(0, 0, 0, 0) 50%);
 }
 
-.article-17::before {
+.article-2::before, .article-17::before {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0) 75%);
 }
 
