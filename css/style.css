@@ -156,7 +156,7 @@ main {
 .article-6, .article-7, .article-8, .article-9, .article-10,
 .article-11, .article-12, .article-13, .article-14, .article-15, 
 .article-16, .article-17, .article-18, .article-19, .article-20,
-.article-21, .article-22, .article-23 {
+.article-21, .article-22, .article-23, .article-24 {
     width: 322px;
     height: 240px;
     display: flex;
@@ -167,19 +167,28 @@ main {
     transition: all 0.25s ease-out;
 }
 
-.article-21 {
+/*.article-21 {
     width: 388px;
     height: 290px;
     margin-left: 337px;
     margin-top: -295px;
+}*/
+
+.article-21 {
+    margin-top: -295px;
 }
 
-.article-23 {
+.article-22 {
+    margin-left: 337px;
+    margin-top: -295px;
+}
+
+.article-24 {
     width: 322px;
     height: 610px;
 }
 
-.article-4, .article-9, .article-14, .article-19, .article-22  {
+.article-4, .article-9, .article-14, .article-19, .article-23  {
     width: 388px;
     height: 310px;
 }
@@ -190,12 +199,12 @@ main {
     margin-top: -65px;
 }
 
-.article-2, .article-7, .article-12, .article-17{
+.article-2, .article-7, .article-12, .article-17, .article-22 {
     width: 173px;
     height: 290px;
 }
 
-.article-1, .article-6, .article-11, .article-16 {
+.article-1, .article-6, .article-11, .article-16, .article-21 {
     width: 205px;
     height: 290px;
 }
