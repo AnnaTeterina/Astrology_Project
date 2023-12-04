@@ -9,7 +9,6 @@ body {
 
 .arrow_back {
     width: 100%;
-    height: 45px;
     padding-top: 40px;
     padding-right: 40px;
     grid-column-start: 1;
@@ -20,35 +19,60 @@ body {
 
 .mimi-menu {
     background-color: #ffffff;
-    width: 140px;
-    height: 90px;
+    width: 180px;
+    height: 295px;
     border-radius: 20px;
     display: flex;
     padding-left: 5px;
-    justify-content: space-between;
     font-size: 20px;
+    position: fixed;
 }
 
 .mimi-menu img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    width:35px;
+    height: 35px;
+    margin-top: 12px;
+    margin-left: 10px;
 }
 
 .links {
-    padding: 10px 0;
-    width: 95px;
+    margin-left: 10px;
     transition: all 5s ease-in-out;
+}
+
+.links ul {
+    padding: 0;
+}
+
+.links li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.list_mainPage {
+    padding-left: 20px;
 }
 
 .links a {
     color: #000000;
     text-decoration: none;
-    transition: all 5s ease-in-out;
+    position: relative;
+    transition: all 0.25s ease-out;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.links a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.25s ease-out;
+}
+
+.links a:hover::before {
+    width: 100%;
 }
 
 main {
@@ -67,7 +91,7 @@ main {
     font-size: 30px;
     padding-bottom: 10px;
     width: 100%;
-    /*border-bottom: 1px solid #cacaca;*/
+    border-bottom: 1px solid #cacaca;
 }
 
 .article-text-header {
@@ -106,6 +130,27 @@ main {
     padding: 20px 0;
 }
 
+.article__body p a {
+    position: relative;
+    transition: all 0.25s ease-out;
+    text-decoration: none;
+}
+
+.article__body p a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0000FF;
+    transition: width 0.25s ease-out;
+}
+
+.article__body p a:hover::before {
+    width: 100%;
+}
+
 .article__body h4 {
     padding: 20px 0;
 }
@@ -114,9 +159,16 @@ ol {
     padding-left: 23px;
 }
 
-
 li {
     margin: 20px 0;
+}
+
+ul li {
+    color: #481ebb;
+}
+
+li span {
+    color: #000000;
 }
 
 li:first-child {
