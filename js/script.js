@@ -35,3 +35,21 @@ jQuery(document).ready(function($){
       if ($(".videos:hidden").length < 1) $(this).fadeOut();
     })
   })
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('showed');
+    }
+  });
+}
+  
+let options = {
+  threshold: [0.01] 
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.showingWithScroll');
+  
+for (let elm of elements) {
+  observer.observe(elm);
+} 

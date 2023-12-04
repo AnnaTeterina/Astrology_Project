@@ -3,7 +3,8 @@
 body {
     color: #000000;
     display: grid;
-    grid-template-columns: repeat(8, 1fr)
+    grid-template-columns: repeat(8, 1fr);
+    overflow-y: scroll;
 }
 
 .arrow_back {
@@ -15,19 +16,32 @@ body {
     text-align: right;
     grid-column-start: 1;
     grid-column-end: 3;
+    transition: all 1s ease-in-out;
 }
 
-.arrow_back img {
+.mimi-menu img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
 }
 
+.mimi-menu a {
+    display: none;
+}
+
+.mimi-menu:hover {
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.mimi-menu:hover a {
+    display: block;
+}
+
 main {
     width: 1000px;
-    height: calc(100vh - 80px);
+    height: auto;
     margin: 40px auto;
-    overflow-y: scroll;
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 25px;
@@ -36,32 +50,38 @@ main {
     grid-column-end: 7;
 }
 
-main::-webkit-scrollbar { 
-    width: 0; 
-}
-
 .article__header {
-    font-size: 27px;
+    font-size: 30px;
     padding-bottom: 10px;
     width: 100%;
-    text-align: right;
+    /*border-bottom: 1px solid #cacaca;*/
 }
 
 .article-text-header {
     text-align: justify;
+    line-height: 40px;
 }   
 
-.article-text-header span {
-    font-weight: 400;
-    font-size: 15px;
-    color: #868686;
-}
-
-.article__header p {
-    margin-top: 10px;
+.article-block-info {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin: 20px 0;
     font-size: 17px;
     line-height: 15px;
     color: #868686;
+    height: 15px;
+    width: 100%;
+}
+
+.time-eye {
+    display: flex;
+    align-items: center;
+}
+
+.time-eye img {
+    height: 17px;
+    margin-right: 5px;
 }
 
 .article__body {

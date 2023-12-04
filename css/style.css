@@ -69,6 +69,15 @@ main {
     margin: 0 auto;
 }
 
+.showingWithScroll {
+    transform: translateY(80px);
+}
+
+.showingWithScroll.showed {
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
 .blog {
     width: 100%;
     height: auto;
@@ -213,7 +222,7 @@ main {
 .article-6::before, .article-7::before, .article-8::before, .article-9::before, .article-10::before,
 .article-11::before, .article-12::before, .article-13::before, .article-14::before, .article-15::before, 
 .article-16::before, .article-17::before, .article-18::before, .article-19::before, .article-20::before,
-.article-21::before, .article-22::before, .article-23::before {
+.article-21::before, .article-22::before, .article-23::before, .article-24::before {
     content: '';
     z-index: 10;
     width: 100%;
@@ -233,7 +242,7 @@ main {
 .article-6:hover, .article-7:hover, .article-8:hover, .article-9:hover, .article-10:hover,
 .article-11:hover, .article-12:hover, .article-13:hover, .article-14:hover, .article-15:hover, 
 .article-16:hover, .article-17:hover, .article-18:hover, .article-19:hover, .article-20:hover,
-.article-21:hover, .article-22:hover, .article-23:hover {
+.article-21:hover, .article-22:hover, .article-23:hover, .article-24:hover {
     z-index: 11;
     transform: scale(1.04);   
     /*box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.35);*/
