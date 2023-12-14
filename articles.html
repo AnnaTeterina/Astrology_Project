@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/articles_page.css" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1" /> <!--указывает браузеру, что нужна ширина области просмотра такая же, как и ширина экрана и устанавливает начальный масштаб страницы 100%-->
         <meta http-equiv="X-UA-Compatible" content="ie=edge" /> <!--управляет отображением страницы в браузерах IE-->
         <!-- Link Swiper's CSS -->
@@ -18,6 +19,36 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
             }   
+            .img_1, .img_2, .img_3, .img_4, .img_5 {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/article_1.jpg);
+                background-position: center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+            }
+            .img_2 {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/article_vibration_1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .img_3 {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/article_weight_loss.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .img_4 {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/article_energy.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .img_5 {
+                background: radial-gradient(at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/article_weight_loss.jpg);
+                background-position: center;
+                background-size: cover;
+            }
         </style>
     </head>
     <body>
@@ -45,7 +76,7 @@
                             <a href="index.html#">Контакты</a>
                         </li>
                         <li>
-                            <a href="articles.html">Статьи</a>
+                            <a class="active" href="articles.html">Статьи</a>
                         </li>
                         <li>
                             <a href="">Медитации</a>
@@ -55,8 +86,135 @@
             </div>
         </section>
         <main>
-            
-            
+            <div class="header_articles">
+                <form action="" method="get">
+                    <input  name="search" placeholder="Искать здесь..." type="search">
+                    <button type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;"></button>
+                </form>
+                <div class="sortBlock">
+                    <label for="sort">Сортировать</label>
+                    <select name="sort" id="sort">
+                        <option id="new_sort" value="new">Сначала новые</option>
+                        <option id="old_sort" value="old">Сначала старые</option>
+                    </select>
+                </div>
+            </div>
+            <div class="articles_block">
+                <div class="articles_row">
+                    <a href="kak-uvelichit-energoobmen-i-stat-stroinee.html">
+                        <div class="img_5">
+                            <div class="article_text">
+                                <h3>Как увеличить ЭНЕРГООБМЕН и стать стройнее</h3>
+                                <p>
+                                    Есть физическое взаимодействие с телом, а есть энергетическое. Очень важно сбалансировать ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="naidite-svoi-instrument-opredeleniya-energoobmena.html">
+                        <div class="img_4">
+                            <div class="article_text">
+                                <h3>Найдите свой инструмент определения энергообмена</h3>
+                                <p>
+                                    Если вы читали мои предыдущие статьи про "ПОЛНОТУ ТЕЛА и ЭНЕРГООБМЕН" и вам ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="pro_polnotu_tela_i_energoobmen_chast_5.html">
+                        <div class="img_3">
+                            <div class="article_text">
+                                <h3>Про полноту тела... и энергообмен. Часть 5</h3>
+                                <p>
+                                    Я в 16 лет знала, что в 80 лет буду выглядеть на 35 лет и буду стройной. Позже, когда занялась духовным 
+                                    развитием ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="pro_polnotu_tela_i_energoobmen_chast_4.html">
+                        <div class="img_3">
+                            <div class="article_text">
+                                <h3>Про полноту тела... и энергообмен. Часть 4</h3>
+                                <p>
+                                    Когда я начала понимать принцип действия определения и коррекции энергообмена и применять этот инструмент на ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="pro_polnotu_tela_i_energoobmen_chast_3.html">
+                        <div class="img_3">
+                            <div class="article_text">
+                                <h3>Про полноту тела... и энергообмен. Часть 3</h3>
+                                <p>
+                                    В первых двух частях была присказка, а теперь начинается самое интересное. Размышления об ответах ВС 
+                                    по поводу ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="pro_polnotu_tela_i_energoobmen_chast_2.html">
+                        <div class="img_3">
+                            <div class="article_text">
+                                <h3>Про полноту тела... и энергообмен. Часть 2</h3>
+                                <p>
+                                    … «Форма тела создается на тонком плане и соответствует эфирному телу. Эфирный "обрис" первичен, 
+                                    под него ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="pro_polnotu_tela_i_energoobmen_chast_1.html">
+                        <div class="img_3">
+                            <div class="article_text">
+                                <h3>Про полноту тела... и энергообмен. Часть 1</h3>
+                                <p>
+                                    Мне пришло знание, что стройное физическое тело можно обрести и это не зависит от возраста или уровня 
+                                    вибраций ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="osoznannoe-povishenie-vibracii-blagodorya-vnimaniyu-v-telo-primeri.html">
+                        <div class="img_2">
+                            <div class="article_text">
+                                <h3>Осознанное повышение вибраций благодаря вниманию в тело (примеры)</h3>
+                                <p>
+                                    Вы договорились с кем-то встретиться, но сразу после ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles_row">
+                    <a href="osoznannoe_povishenie_vibracii_blagodorya_vnimaniyu_v_telo.html">
+                        <div class="img_1">
+                            <div class="article_text">
+                                <h3>Осознанное повышение вибраций благодаря вниманию в тело</h3>
+                                <p>
+                                    Реакция тела подскажет, когда вы думаете и реагируете правильно именно для вас или укажет на ...
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </main>
+
+        <script src="js/search.js"></script>
     </body>
 </html>
